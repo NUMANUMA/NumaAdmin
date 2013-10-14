@@ -1,6 +1,6 @@
 name: NumaAdmin
 main: com.github.NUMANUMA.NumaAdmin.NumaAdmin
-version: 1.0.0
+version: 1.0.1
 commands:
   gm:
     description: Change game mode command.

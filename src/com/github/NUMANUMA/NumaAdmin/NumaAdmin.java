@@ -14,6 +14,10 @@ public class NumaAdmin extends JavaPlugin{
         log.info("プラグインが有効になりました。");
 
         getServer().getPluginManager().registerEvents(eve, this);
+
+        //コマンドの追加
+        eve = new Event(this);
+        getCommand("gm").setExecutor(eve);
     }
 
     @Override
