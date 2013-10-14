@@ -1,0 +1,9 @@
+name: NumaAdmin
+main: com.github.NUMANUMA.NumaAdmin.NumaAdmin
+version: 1.0.0
+commands:
+  gm:
+    description: Change game mode command.
+    usage: /gm [0=サバイバル,1=クリエイティブ,2=アドベンチャー]
+    permission: NumaAdmin.gm
+    permission-message: You don't have <permission>
