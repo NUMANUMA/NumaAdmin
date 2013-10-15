@@ -7,3 +7,8 @@ commands:
     usage: /gm [0=サバイバル,1=クリエイティブ,2=アドベンチャー]
     permission: NumaAdmin.gm
     permission-message: You don't have <permission>
+  aa:
+    description: AA表示
+    usage: /aa
+    permission: NumaAdmin.aa
+    permission-message: You don't have <permission>

@@ -18,6 +18,7 @@ public class NumaAdmin extends JavaPlugin{
         //コマンドの追加
         eve = new Event(this);
         getCommand("gm").setExecutor(eve);
+        getCommand("aa").setExecutor(eve);
     }
 
     @Override
