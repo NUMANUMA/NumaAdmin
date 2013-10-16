@@ -6,23 +6,32 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class NumaAdmin extends JavaPlugin{
     Logger log;
-    public Event eve = new Event(this);
+
+    private API API;
 
     @Override
     public void onEnable() {
         log = this.getLogger();
         log.info("プラグインが有効になりました。");
 
-        getServer().getPluginManager().registerEvents(eve, this);
+        //config
+        saveDefaultConfig();
+
+        //Get API
+        API = new API(this);
+
+        //イベントの登録
+        new Event(this);
+        new DeathSpawn(this);
 
         //コマンドの追加
-        eve = new Event(this);
-        getCommand("gm").setExecutor(eve);
-        getCommand("aa").setExecutor(eve);
+        getCommand("gm").setExecutor(new Event(this));
+        getCommand("aa").setExecutor(new Event(this));
+        getCommand("spawn").setExecutor(new SpawnCommander(this));
+        getCommand("setspawn").setExecutor(new SpawnCommander(this));
     }
 
-    @Override
-    public void onDisable() {
-        log.info("プラグインが無効になりました。");
+    public API getAPI() {
+        return API;
     }
 }

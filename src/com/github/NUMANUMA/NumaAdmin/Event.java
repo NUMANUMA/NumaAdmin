@@ -13,7 +13,11 @@ import org.bukkit.event.Listener;
 
 public class Event implements Listener, CommandExecutor {
 
+    NumaAdmin plugin;
+
     public Event(NumaAdmin plugin) {
+        this.plugin = plugin;
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
     //イベントたち
@@ -25,7 +29,14 @@ public class Event implements Listener, CommandExecutor {
             player = (Player) sender;
         }
 
-        //gmコマンド
+        /*
+         * ゲームモードを変更する
+         *
+         * @gm [0,1,2]
+         * 0 = Survival
+         * 1 = Creative
+         * 2 = Adventure
+         */
         if (cmd.getName().equalsIgnoreCase("gm")) {
             if (player != null) {
                 if (args.length == 0) {
@@ -82,10 +93,16 @@ public class Event implements Listener, CommandExecutor {
             return true;
         }
 
+        /*
+         * アスキーアートを表示する
+         * (真顔AA)
+         *
+         * @aa
+         */
         if (cmd.getName().equalsIgnoreCase("aa")) {
 
             Scanner s = new Scanner(getClass().getResourceAsStream("/aa.txt"));
-            while(s.hasNextLine())
+            while (s.hasNextLine())
             {
                 Bukkit.getServer().broadcastMessage(s.nextLine());
             }

@@ -1,0 +1,11 @@
+#NumaAdmin Config#
+
+world:
+x:
+y:
+z:
+yaw:
+pitch:
+
+#死亡したときにスポーンポイントへテレポート
+deathtp: true
