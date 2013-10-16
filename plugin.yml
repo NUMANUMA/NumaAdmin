@@ -22,3 +22,8 @@ commands:
     usage: /<command>
     permission: numaadmin.setspawn
     permission-message: You don't have <permission>
+  tenki:
+    description: 天気変更
+    usage: /<command> [hare=晴れ,ame=雨,kaminari=雷雨]
+    permission: numaadmin.tenki
+    permission-message: You don't have <permission>

@@ -1,7 +1,6 @@
 package com.github.NUMANUMA.NumaAdmin;
 
 import org.bukkit.Bukkit;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
@@ -16,7 +15,7 @@ public class DeathSpawn implements Listener {
     /*
      * 死亡したらスポーンポイントにスポーン
      */
-    @EventHandler
+
     public void onPlayerRespawn(final PlayerRespawnEvent e) {
         if (plugin.getAPI().onDeath()) {
             Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {

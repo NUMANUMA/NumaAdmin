@@ -29,6 +29,7 @@ public class NumaAdmin extends JavaPlugin{
         getCommand("aa").setExecutor(new Event(this));
         getCommand("spawn").setExecutor(new SpawnCommander(this));
         getCommand("setspawn").setExecutor(new SpawnCommander(this));
+        getCommand("tenki").setExecutor(new WeatherCommander(this));
     }
 
     public API getAPI() {
