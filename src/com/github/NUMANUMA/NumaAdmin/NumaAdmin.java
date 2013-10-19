@@ -16,6 +16,7 @@ public class NumaAdmin extends JavaPlugin{
 
         //config
         saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
 
         //Get API
         API = new API(this);
@@ -23,16 +24,14 @@ public class NumaAdmin extends JavaPlugin{
         //イベントの登録
         new Event(this);
         new DeathSpawn(this);
-        new MeteoCommander(this);
-        new OreEvent(this);
 
         //コマンドの追加
         getCommand("gm").setExecutor(new Event(this));
         getCommand("spawn").setExecutor(new SpawnCommander(this));
         getCommand("setspawn").setExecutor(new SpawnCommander(this));
         getCommand("tenki").setExecutor(new WeatherCommander(this));
-        getCommand("meteo").setExecutor(new MeteoCommander(this));
         getCommand("oreevent").setExecutor(new OreEvent(this));
+        getCommand("oreconfig").setExecutor(new OreEvent(this));
     }
 
     public API getAPI() {
