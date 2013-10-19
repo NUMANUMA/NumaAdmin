@@ -1,8 +1,5 @@
 package com.github.NUMANUMA.NumaAdmin;
 
-import java.util.Scanner;
-
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -92,24 +89,6 @@ public class Event implements Listener, CommandExecutor {
             }
             return true;
         }
-
-        /*
-         * アスキーアートを表示する
-         * (真顔AA)
-         *
-         * @aa
-         */
-        if (cmd.getName().equalsIgnoreCase("aa")) {
-
-            Scanner s = new Scanner(getClass().getResourceAsStream("/aa.txt"));
-            while (s.hasNextLine())
-            {
-                Bukkit.getServer().broadcastMessage(s.nextLine());
-            }
-            s.close();
-            return true;
-        }
         return false;
     }
-
 }

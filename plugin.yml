@@ -7,11 +7,6 @@ commands:
     usage: /gm [0=サバイバル,1=クリエイティブ,2=アドベンチャー]
     permission: numaadmin.gm
     permission-message: You don't have <permission>
-  aa:
-    description: AA表示
-    usage: /<command>
-    permission: numaadmin.aa
-    permission-message: You don't have <permission>
   spawn:
     description: スポーン
     usage: /<command>
@@ -26,4 +21,14 @@ commands:
     description: 天気変更
     usage: /<command> [hare=晴れ,ame=雨,kaminari=雷雨]
     permission: numaadmin.tenki
+    permission-message: You don't have <permission>
+  meteo:
+    description: メテオ落下
+    usage: /<command>
+    permission: numaadmin.meteo
+    permission-message: You don't have <permission>
+  oreevent:
+    descripiton: 鉱石イベント開始
+    usage: /<command>
+    permission: numaadmin.oreevent
     permission-message: You don't have <permission>
